@@ -58,12 +58,12 @@ let power = new ROSLIB.Topic({
 
 pot_temperature.subscribe(function(message) {
     console.log('Received message on ' + pot_temperature.name + ': ' + message.data);
-    document.getElementById('btemp').innerHTML =  message.data;
+    document.getElementById('btemp').innerHTML =  parseFloat( message.data).toFixed(2);
 });
 
 amb_temperature.subscribe(function(message) {
     console.log('Received message on ' + pot_temperature.name + ': ' + message.data);
-    document.getElementById('atemp').innerHTML =  message.data;
+    document.getElementById('atemp').innerHTML =  parseFloat( message.data).toFixed(2);
 });
 
 setpoint.subscribe(function(message) {
