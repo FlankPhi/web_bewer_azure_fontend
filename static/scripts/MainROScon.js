@@ -49,6 +49,13 @@ let setpoint = new ROSLIB.Topic({
     messageType : 'std_msgs/Float32'
 });
 
+let u_setpoint = new ROSLIB.Topic({
+    ros : ros,
+    name : '/user/sp',
+    messageType : 'std_msgs/Float32'
+});
+u_setpoint.advertise();
+
 let power = new ROSLIB.Topic({
     ros : ros,
     name : '/pow',
@@ -75,3 +82,17 @@ power.subscribe(function(message) {
     console.log('Received message on ' + power.name + ': ' + message.data);
     document.getElementById('pow').innerHTML =  message.data;
 });
+
+function commit() {
+    var sp =  Number(document.getElementById('settemp').getAttribute('value'));
+    console.log(sp);
+    u_setpoint.publish(new ROSLIB.Message({data:sp}));
+}
+function add() {
+    var sp =  document.getElementById('settemp').getAttribute('value');
+    document.getElementById('settemp').setAttribute('value', ++sp);
+}
+function sub() {
+    var sp =  document.getElementById('settemp').getAttribute('value');
+    document.getElementById('settemp').setAttribute('value', --sp);
+}
