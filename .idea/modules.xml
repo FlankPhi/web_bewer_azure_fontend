@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/web_bewer_azure_fontend.iml" filepath="$PROJECT_DIR$/.idea/web_bewer_azure_fontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../web_brewer/.idea/web_brewer.iml" filepath="$PROJECT_DIR$/../web_brewer/.idea/web_brewer.iml" />
     </modules>
   </component>
 </project>
