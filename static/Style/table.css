@@ -1,0 +1,63 @@
+
+table {
+
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+
+    text-align: left;
+    padding: 8px;
+}
+td.small{
+    width: 70px;
+}
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+tr:nth-child(odd){
+    background-color: #D8DBE2;
+}
+
+img.status{
+    width: 50px;
+
+}
+.invisTab{
+    background-color: transparent;
+    border: transparent;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 5px #a8a8a8;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+    box-shadow: 5px 5px 5px #a8a8a8;
+}
+
+
+.rBut{
+    font-size: 40px;
+}
+label.rBut:hover{
+    color: crimson;
+}
+
+.posbtn:hover, .dropbtn:focus {
+    background-color: #025c83;
+    /*box-shadow: 5px 5px 5px #a8a8a8;*/
+}

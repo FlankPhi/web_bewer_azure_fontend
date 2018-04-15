@@ -1,0 +1,81 @@
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .containerDiv{
+    background-color: white;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.hamburger {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.hamburger-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y:scroll;
+    max-height:300px;
+    right: 0px
+}
+
+/* Links inside the dropdown */
+.hamburger-content label {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.hamburger-content label:hover {background-color: #888888}
+
+
+/* Links inside the dropdown */
+.hamburger-content-label {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.hambuger_el{
+    display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.hambuger_el:hover{
+    background-color: #888888;
+}
+

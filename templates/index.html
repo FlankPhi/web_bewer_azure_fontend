@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <!-- import required scrips for com-->
+    <script type = "text/javascript" src="{{ url_for('static', filename = 'rosLib/eventemitter2.js') }}"></script>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'rosLib/roslib.js') }}" ></script>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'rosLib/jquery.min.js') }}"></script>
+
+    <!-- event scripts -->
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'scripts/MainROScon.js') }}"></script>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'scripts/Chart.min.js') }}"></script>
+
+    <!-- styling -->
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename = 'Style/w3.css') }}">
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename = 'Style/background.css') }}">
+
+    <!-- company logos -->
+    <link rel="icon"   href="{{ url_for('static', filename = 'Icons/favicon.ico') }}" />
+     {% block head %}
+    <title>{% block title %}{% endblock %} - ShitBrewing</title>
+    {% endblock %}
+</head>
+<body>
+    <div>
+      <div class="row" style="height: 20%">
+       <div class="navbar-header" onclick="window.location='/'">
+            <img src="{{ url_for('static', filename = 'Icons/logo_header_black.png') }}">
+        </div>
+      </div>
+      <div class="row"  style="height: 70%">
+            <div class="columnSplitt" >{% block leftPan %}{% endblock %}</div>
+            <div class="columnSplitt" >{% block rightPan %}{% endblock %}</div>
+      </div>
+
+
+      <div class="row"  style="height: 10%">
+        <div id="footer">
+          {% block footer %}
+          &copy; Copyright 2018 by <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQrostop   ">ShitBrewing</a>.
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+

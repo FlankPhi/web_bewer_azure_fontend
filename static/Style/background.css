@@ -1,0 +1,55 @@
+:root {
+  --main-bg-color: #ECE4B7;
+  --sec-bg-color: #D9DD92;
+  --th-bg-color: #EABE7C;
+  --fh-bg-color: #DD6031;
+  --last-bg-color: #311E10;
+}
+body {
+    background: var(--main-bg-color);
+
+    margin-top: 20px;
+    margin-left: 70px;
+
+    color: var(--last-bg-color);
+    font-family: "Open Sans";
+    font-weight: 300;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+
+.navbar-header {
+    background-color: var(--sec-bg-color);
+	margin-bottom: 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.columnSplitt {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

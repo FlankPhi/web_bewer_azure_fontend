@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style/background.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style/table.css') }}">
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+  <style>
+
+* {
+    box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.columnSplitt {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  </style>
+  </head>
+
+  <body>
+  <div class="row">
+   <div class="navbar-brand" onclick="window.location='/';" style="float: left">
+        <img src="{{ url_for('static', filename = 'Icons/logo_header_black.png') }}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="columnSplitt">
+        <div class="columnSplitt" style="width: 80%">{% block selection %}{% endblock %}</div>
+        <div class="columnSplitt" style="width: 80%">{% block productinfo %}{% endblock %}</div>
+        <div class="columnSplitt" style="width: 20%"></div>
+    </div>
+    <div class="columnSplitt">{% block content %}{% endblock %}</div>
+  </div>
+
+
+  <div class="row">
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+      {% endblock %}
+    </div>
+  </div>
+
+  </body>
+</html>
