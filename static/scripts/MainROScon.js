@@ -3,7 +3,7 @@ console.log('Running script to establish conection with ROS');
 // -----------------
 
 var ros = new ROSLIB.Ros({
-    url : 'ws://192.168.1.40:9090'
+    url : 'ws://192.168.1.41:9090'
 });
 
 ros.on('connection', function() {
@@ -34,25 +34,25 @@ listener_search.subscribe(function(message) {
 let pot_temperature = new ROSLIB.Topic({
     ros : ros,
     name : '/t1',
-    messageType : 'std_msgs/Float'
+    messageType : 'std_msgs/Float32'
 });
 
 let amb_temperature = new ROSLIB.Topic({
     ros : ros,
     name : '/t2',
-    messageType : 'std_msgs/Float'
+    messageType : 'std_msgs/Float32'
 });
 
 let setpoint = new ROSLIB.Topic({
     ros : ros,
     name : '/sp',
-    messageType : 'std_msgs/Float'
+    messageType : 'std_msgs/Float32'
 });
 
 let power = new ROSLIB.Topic({
     ros : ros,
     name : '/pow',
-    messageType : 'std_msgs/Int'
+    messageType : 'std_msgs/UInt8'
 });
 
 
