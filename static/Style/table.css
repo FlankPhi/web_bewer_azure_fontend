@@ -15,15 +15,23 @@ td.small{
     width: 70px;
 }
 tr:nth-child(even) {
-    background-color: #f1f1f1;
+    background-color: var(--sec-bg-color);
+
 }
 tr:nth-child(odd){
-    background-color: #D8DBE2;
+    background-color: var(--th-bg-color);
 }
 
 img.status{
     width: 50px;
 
+}
+
+.setTemp{
+    background-color: var(--th-bg-colorD);
+    border: 2px solid var(--th-bg-colorD);
+    border-radius: 4px;
+    text-align: right;
 }
 .invisTab{
     background-color: transparent;
@@ -31,21 +39,22 @@ img.status{
 }
 
 /* Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
+.dropbtn, .dropbtn:focus, .dropbtn:active{
+    background-color: var(--fh-bg-color);
     color: white;
     padding: 10px;
-    font-size: 16px;
+    font-size: 24px;
     border: none;
     cursor: pointer;
-    width: 200px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
     box-shadow: 10px 10px 5px #a8a8a8;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+.dropbtn:hover{
+    background-color: var(--fh-bg-colorD);
     box-shadow: 5px 5px 5px #a8a8a8;
 }
 
