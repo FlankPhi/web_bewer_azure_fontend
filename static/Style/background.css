@@ -2,7 +2,9 @@
   --main-bg-color: #ECE4B7;
   --sec-bg-color: #D9DD92;
   --th-bg-color: #EABE7C;
+    --th-bg-colorD: #d6a979;
   --fh-bg-color: #DD6031;
+  --fh-bg-colorD: #a04f29;
   --last-bg-color: #311E10;
 }
 body {
